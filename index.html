@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & AQI App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h2>Weather & Air Quality</h2>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name..." value="London">
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div id="weather-result" class="weather-card hidden">
+            <h3 id="location-name">--</h3>
+            <p id="local-time">--</p>
+            <div class="weather-main">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <span id="temperature">--</span>
+            </div>
+            <p id="weather-condition">--</p>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span>Feels Like</span>
+                    <strong id="feels-like">--</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Humidity</span>
+                    <strong id="humidity">--</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Wind</span>
+                    <strong id="wind-speed">--</strong>
+                </div>
+            </div>
+
+            <!-- New AQI Display Panel -->
+            <div class="aqi-panel">
+                <h4>Air Quality Index</h4>
+                <div class="aqi-status" id="aqi-status-box">
+                    <span id="aqi-text">Loading...</span>
+                </div>
+                <div class="aqi-breakdown">
+                    <div class="pollutant">
+                        <span>PM2.5</span>
+                        <strong id="pm25">--</strong>
+                    </div>
+                    <div class="pollutant">
+                        <span>PM10</span>
+                        <strong id="pm10">--</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p id="error-message" class="error hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
